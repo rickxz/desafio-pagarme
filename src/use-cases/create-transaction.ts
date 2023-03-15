@@ -15,7 +15,7 @@ type CreateTransactionResponse = Transaction
 
 export class CreateTransaction {
     constructor(
-        private transactionRepository: TransactionsRepository
+        private transactionsRepository: TransactionsRepository
     ) {}
 
     async execute({ value, description, paymentMethod, cardNumber, cardholder, validity, cvv }: CreateTransactionRequest): Promise<CreateTransactionResponse> {
@@ -29,7 +29,7 @@ export class CreateTransaction {
             cvv
         })
 
-        this.transactionRepository.create(transaction)
+        this.transactionsRepository.create(transaction)
         return transaction
     }
 }

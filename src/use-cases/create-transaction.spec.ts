@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { Transaction } from "../entities/transaction";
 import { InMemoryTransactionsRepository } from "../repositories/in-memory/in-memory-transactions-repository";
 import { getFutureDate } from "../tests/utils/get-future-date";
 import { CreateTransaction } from "./create-transaction";
