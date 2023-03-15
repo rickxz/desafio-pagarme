@@ -19,7 +19,7 @@ describe('Create Transaction', () => {
             cvv: 123,
         })
 
-        expect(transactionsRepository.items.length).toBe(1)
+        expect(transactionsRepository.items).toHaveLength(1)
 
     })
 })
