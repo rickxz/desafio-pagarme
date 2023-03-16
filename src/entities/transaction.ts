@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid'
+
 export type TransactionProps = {
     value: number
     description: string
@@ -9,12 +11,17 @@ export type TransactionProps = {
 }
 
 export class Transaction {
+    public readonly uuid: string
     private props: TransactionProps
 
     constructor(props: TransactionProps) {
         const { cardNumber } = props
-
         this.props = props
+        
+        if (!this.uuid) {
+            this.uuid = uuidv4()
+        }
+
         this.props.cardNumber = cardNumber.slice(-4)
 
         if (this.props.value <= 0) {

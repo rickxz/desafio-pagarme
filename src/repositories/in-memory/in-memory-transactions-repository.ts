@@ -11,4 +11,14 @@ export class InMemoryTransactionsRepository implements TransactionsRepository {
     async list(): Promise<Transaction[]> {
         return this.items
     }
+
+    async findById(id: string): Promise<Transaction | null> {
+        const transaction = this.items.find(item => item.uuid === id)
+
+        if (!transaction) {
+            return null
+        }
+
+        return transaction
+    }
 }
