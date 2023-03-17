@@ -1,4 +1,4 @@
-import { Payable, type PayableProps } from '../../entities/payable'
+import { Payable } from '../../entities/payable'
 import { Transaction, type TransactionProps } from '../../entities/transaction'
 import { getFutureDate } from './get-future-date'
 
@@ -19,10 +19,8 @@ export const TransactionFactory = (overrides?: TransactionFactoryOverrides): Tra
   return new Transaction(props)
 }
 
-type PayableFactoryOverrides = Partial<PayableProps>
-
-export const PayableFactory = (overrides?: PayableFactoryOverrides): Payable => {
-  const transaction = TransactionFactory()
+export const PayableFactory = (overrides?: TransactionFactoryOverrides): Payable => {
+  const transaction = TransactionFactory(overrides)
 
   const payable = new Payable(transaction)
 

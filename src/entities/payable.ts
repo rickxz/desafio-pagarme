@@ -13,10 +13,10 @@ const DEFAULT_PAYABLE_PROPS: PayableProps = {
 }
 
 export class Payable {
-  private readonly transaction: Transaction
+  public readonly transaction: Transaction
   public props: PayableProps
 
-  constructor (transaction) {
+  constructor (transaction: Transaction) {
     this.transaction = transaction
     this.props = { ...DEFAULT_PAYABLE_PROPS }
     this.setFromTransaction(transaction)
