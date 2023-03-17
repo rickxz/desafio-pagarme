@@ -1,6 +1,6 @@
-import { expect, test } from "vitest";
-import { getFutureDate } from "./get-future-date";
+import { expect, test } from 'vitest'
+import { getFutureDate } from './get-future-date'
 
 test('increases date by one year', () => {
-    expect(getFutureDate('2022-11-06').getFullYear()).toEqual(2023)
+  expect(getFutureDate('2022-11-06').getFullYear()).toEqual(2023)
 })

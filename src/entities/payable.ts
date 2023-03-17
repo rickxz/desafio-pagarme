@@ -1,14 +1,14 @@
-type PayableProps = {
-    transaction_uuid: string
-    status: string
-    payment_date: Date
-    fee: number
+export interface PayableProps {
+  transactionUUID: string
+  status: string
+  paymentDate: Date
+  fee: number
 }
 
 export class Payable {
-    props: PayableProps;
+  props: PayableProps
 
-    constructor(props: PayableProps) {
-        this.props = props;
-    }
+  constructor (props: PayableProps) {
+    this.props = props
+  }
 }
