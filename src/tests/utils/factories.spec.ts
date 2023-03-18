@@ -14,6 +14,5 @@ test('generate a payable factory with a transaction overrided property', () => {
     paymentMethod: 'debit_card'
   })
 
-  console.log(payable)
   expect(payable.transaction.paymentMethod).toBe('debit_card')
 })

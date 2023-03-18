@@ -1,5 +1,5 @@
 import { type Transaction } from '../../entities/transaction'
-import { type TransactionsRepository } from '../transactions-repository'
+import { type TransactionsRepository } from './transactions-repository'
 
 export class InMemoryTransactionsRepository implements TransactionsRepository {
   public items: Transaction[] = []

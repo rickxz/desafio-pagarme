@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { InMemoryTransactionsRepository } from '../repositories/in-memory/in-memory-transactions-repository'
-import { getFutureDate } from '../tests/utils/get-future-date'
+import { InMemoryTransactionsRepository } from '../../repositories/transactions/in-memory-transactions-repository'
+import { getFutureDate } from '../../tests/utils/get-future-date'
 import { CreateTransaction } from './create-transaction'
 
 describe('Create Transaction', () => {

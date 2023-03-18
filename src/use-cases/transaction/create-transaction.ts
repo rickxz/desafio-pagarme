@@ -1,5 +1,5 @@
-import { Transaction } from '../entities/transaction'
-import { type TransactionsRepository } from '../repositories/transactions-repository'
+import { Transaction } from '../../entities/transaction'
+import { type TransactionsRepository } from '../../repositories/transactions/transactions-repository'
 
 interface CreateTransactionRequest {
   value: number
