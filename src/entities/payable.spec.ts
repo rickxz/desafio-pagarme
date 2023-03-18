@@ -15,7 +15,7 @@ describe('Payable Entity Unit Tests', () => {
     })
 
     expect(payable.props.status).toBe('paid')
-    expect(payable.props.paymentDate).toEqual(new Date())
+    expect(payable.props.paymentDate.toDateString()).toEqual(new Date().toDateString())
     expect(payable.props.fee).toBe(0.03)
   })
 
