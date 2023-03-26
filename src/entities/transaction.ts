@@ -46,4 +46,8 @@ export class Transaction {
   get paymentMethod (): string {
     return this.props.paymentMethod
   }
+
+  get value (): number {
+    return this.props.value
+  }
 }
